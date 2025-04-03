@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>{% if form.instance.pk %} Edit Your Order {% else %} Place a New Order {% endif %}</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Order</button>
+</form>
+
+<a href="{% url 'order_list' %}"><button style="background-color: #555;">Cancel</button></a>
+{% endblock %}
