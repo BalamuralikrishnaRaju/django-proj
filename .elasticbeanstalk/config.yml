@@ -1,0 +1,20 @@
+branch-defaults:
+  default:
+    environment: x23326701-enviornment
+    group_suffix: null
+  proj:
+    environment: x23326701-enviornment
+global:
+  application_name: x23326701app
+  branch: null
+  default_ec2_keyname: x23326701-california-pemkey
+  default_platform: Python 3.9
+  default_region: us-west-1
+  include_git_submodules: true
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: null
+  repository: null
+  sc: null
+  workspace_type: Application
