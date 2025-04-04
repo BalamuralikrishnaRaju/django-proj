@@ -127,7 +127,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "orders/static"),
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/tmp/staticfiles'  # EB allows writing here
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
