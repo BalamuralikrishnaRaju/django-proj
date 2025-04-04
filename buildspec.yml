@@ -11,8 +11,9 @@ phases:
   pre_build:
     commands:
       - python --version
-      - pylint $(find $CODEBUILD_SRC_DIR -name "*.py") --fail-under=6 || true
-
+      #- pylint $(find $CODEBUILD_SRC_DIR -name "*.py") --fail-under=6 || true
+      #- pylint --exit-zero $CODEBUILD_SRC_DIR/*.py
+      - pylint --exit-zero $CODEBUILD_SRC_DIR/icecream_project/*.py
 artifacts:
   files:
     - '**/*'
