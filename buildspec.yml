@@ -14,6 +14,7 @@ phases:
       #- pylint $(find $CODEBUILD_SRC_DIR -name "*.py") --fail-under=6 || true
       #- pylint --exit-zero $CODEBUILD_SRC_DIR/*.py
       - pylint --exit-zero $CODEBUILD_SRC_DIR/icecream_project/*.py
+      - pylint --exit-zero $CODEBUILD_SRC_DIR/orders/*.py
 artifacts:
   files:
     - '**/*'
