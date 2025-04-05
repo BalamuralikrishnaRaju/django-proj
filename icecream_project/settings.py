@@ -120,12 +120,12 @@ USE_TZ = True
 
 
 
-STATIC_URL = '/static/'
+#STATIC_URL = '/static/'
 
 # Configure STATICFILES_DIRS
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "orders/static/orders"),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "orders/static/orders"),
+# ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
@@ -143,6 +143,12 @@ AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://f2a71a38a62d42359e4168fb12101fcf.vfs.cloud9.us-west-1.amazonaws.com",
+    "https://x23326701-enviornment.eba-m4w9gveu.us-west-1.elasticbeanstalk.com",
+]
 
 
 
