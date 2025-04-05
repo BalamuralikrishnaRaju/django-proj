@@ -124,7 +124,7 @@ STATIC_URL = '/static/'
 
 # Configure STATICFILES_DIRS
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "orders/static"),
+    os.path.join(BASE_DIR, "orders/static/orders"),
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -135,6 +135,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+AWS_STORAGE_BUCKET_NAME = 'x23326701'  
+AWS_S3_REGION_NAME = 'us-east-1'  # e.g. 'us-east-1'
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/static/'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 
