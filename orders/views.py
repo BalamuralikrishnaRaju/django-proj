@@ -5,7 +5,8 @@ from .models import IceCreamFlavor, Order
 from .forms import FlavorForm, SignupForm, OrderForm
 
 def index(request):
-    return render(request, 'index.html')
+    return redirect('login')
+    # return render(request, 'index.html')
 
 
 def signup_view(request):
